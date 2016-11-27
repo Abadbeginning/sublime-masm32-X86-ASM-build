@@ -7,3 +7,6 @@
 <h3><a href="http://www.masm32.com/download.htm">MASM32</a></h3>
 <h3><a href="http://www.dosbox.com/download.php?main=1">DosBox</a></h3>
 <h2>Step 2 16位汇编编译环境配置</h2>
+<h3>添加环境变量</h3>
+打开masm32文件夹,将其中的include、lib的路径分别添加到系统的环境变量include、lib中，如果系统中没有这两个变量名则新建之。在系统的path变量的末尾加上masm32文件夹中bin的路径。
+<h3></h3>
