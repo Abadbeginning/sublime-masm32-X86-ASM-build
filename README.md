@@ -2,7 +2,7 @@
 <h2>Preparation</h2>
 <h3>Sublime Text 3: http://www.sublimetext.com/3</h3>
 <br>
-安装完Sublime后为其安装Package Control，方法见https://packagecontrol.io/installation
+安装完Sublime后为其安装Package Control，方法见https://packagecontrol.io/installation 。
 </br>
 <br>
 接下来，使用快捷键ctrl+shift+p打开Package Control，输入Install Package，打开插件列表，输入插件名MasmAssembly，回车，就可以自动安装了。
