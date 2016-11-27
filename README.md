@@ -1,6 +1,6 @@
 <h1>在Sublime Text 3中使用masm32配置X86汇编(16位&32位）的build-system。</h1>
 <h2>Preparation</h2>
-<h3>Sublime Text 3: http://www.sublimetext.com/3</h3>
+<h3><a href="http://www.sublimetext.com/3">Sublime Text 3</a></h3>
 <br>
 安装完Sublime后为其安装Package Control，方法见https://packagecontrol.io/installation 。
 </br>
