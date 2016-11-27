@@ -10,11 +10,33 @@
 <h3>添加环境变量</h3>
 打开masm32文件夹,将其中的include、lib的路径分别添加到系统的环境变量include、lib中，如果系统中没有这两个变量名则新建之。在系统的path变量的末尾加上masm32文件夹中bin的路径。
 <h3>新建批处理文件</h3>
-在Sublime新建空白文件，编辑内容为<br>
+在Sublime Text 3中新建空白文件，编辑内容为<br>
 <blockquote>
 ml /c %1.asm<br>
 link16 %1.obj;
 </blockquote>
+保存文件名为asm.bat到masm32的bin文件夹中。
+<h3>新建Build System</h3>
+在Sublime Text 3中，选择’Tools’ -> ‘Build System’ -> ‘New Build System…'，将内容覆盖为
+<code>
+{
+    "cmd": ["D:\\masm32\\bin\\asm.bat", "$file_base_name"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.asm",
+    "encoding":"cp936",
+    "variants":
+     [
+          {
+              "name": "Run",
+              "cmd": ["cmd", "/k", "D:\\masm32\\bin\\asm.bat", "$file_base_name",
+              "&&", "D:\\Program Files (x86)\\DOSBox-0.74\\DOSBox.exe"],
+              "shell":true
+          }
+     ]
+}
+</code>
+
+
 
 
 
