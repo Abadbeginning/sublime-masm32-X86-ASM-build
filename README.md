@@ -7,5 +7,6 @@ Sublime Text 3: http://www.sublimetext.com/3
 MASM32: http://www.masm32.com/download.htm
 </p>
 <p>
-由于
+DosBox: http://www.dosbox.com/download.php?main=1
+</p>
 <h2>Step 2 
