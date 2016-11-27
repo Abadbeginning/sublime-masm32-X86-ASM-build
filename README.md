@@ -17,23 +17,23 @@ link16 %1.obj;
 </blockquote>
 保存文件名为asm.bat到masm32的bin文件夹中。
 <h3>新建Build System</h3>
-在Sublime Text 3中，选择’Tools’ -> ‘Build System’ -> ‘New Build System…'，将内容覆盖为
+在Sublime Text 3中，选择’Tools’ -> ‘Build System’ -> ‘New Build System…'，将内容覆盖为<br>
 <code>
-{
-    "cmd": ["D:\\masm32\\bin\\asm.bat", "$file_base_name"],
-    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-    "selector": "source.asm",
-    "encoding":"cp936",
-    "variants":
-     [
-          {
-              "name": "Run",
-              "cmd": ["cmd", "/k", "D:\\masm32\\bin\\asm.bat", "$file_base_name",
-              "&&", "D:\\Program Files (x86)\\DOSBox-0.74\\DOSBox.exe"],
-              "shell":true
-          }
-     ]
-}
+{<br>
+    "cmd": ["D:\\masm32\\bin\\asm.bat", "$file_base_name"],<br>
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",<br>
+    "selector": "source.asm",<br>
+    "encoding":"cp936",<br>
+    "variants":<br>
+     [<br>
+          {<br>
+              "name": "Run",<br>
+              "cmd": ["cmd", "/k", "D:\\masm32\\bin\\asm.bat", "$file_base_name",<br>
+              "&&", "D:\\Program Files (x86)\\DOSBox-0.74\\DOSBox.exe"],<br>
+              "shell":true<br>
+          }<br>
+     ]<br>
+}<br>
 </code>
 
 
