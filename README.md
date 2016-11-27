@@ -10,8 +10,12 @@
 <h3>添加环境变量</h3>
 打开masm32文件夹,将其中的include、lib的路径分别添加到系统的环境变量include、lib中，如果系统中没有这两个变量名则新建之。在系统的path变量的末尾加上masm32文件夹中bin的路径。
 <h3>新建批处理文件</h3>
-打开Sublime，新建空白文件，编辑内容为<br>
+在Sublime新建空白文件，编辑内容为<br>
+<blockquote>
 ml /c %1.asm<br>
-link16 %1.obj;<br>
+link16 %1.obj;
+</blockquote>
+
+
 
 
