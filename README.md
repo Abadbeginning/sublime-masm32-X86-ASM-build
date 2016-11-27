@@ -2,7 +2,7 @@
 
 
 
-```
+```JSON
 {
     "cmd": ["D:\\masm32\\bin\\asm.bat", "$file_base_name"],
     "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
