@@ -18,7 +18,7 @@ link16 %1.obj;
 保存文件名为asm.bat到masm32的bin文件夹中。
 <h3>新建Build System</h3>
 在Sublime Text 3中，选择’Tools’ -> ‘Build System’ -> ‘New Build System…'，将内容覆盖为<br>
-<code>
+<blockquote>
 {<br>
     "cmd": ["D:\\masm32\\bin\\asm.bat", "$file_base_name"],<br>
     "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",<br>
@@ -34,7 +34,7 @@ link16 %1.obj;
           }<br>
      ]<br>
 }<br>
-</code>
+</blockquote>
 
 
 
