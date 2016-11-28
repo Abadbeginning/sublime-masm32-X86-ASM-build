@@ -1,4 +1,4 @@
-# Sublime下使用masm32配置X86汇编编译环境
+# Sublime下配置X86汇编编译环境
 配置教程参考了piratf的[64位Windows环境下通过"Sublime Text 3"搭建汇编语言IDE](http://piratf.ml/2015/05/28/asm-in-windows-x64/)，实际配置环境为`Windows 7 32位`。
 ## 准备工作
 1. 安装[`Sublime Text 3`](http://www.sublimetext.com/3)和[`Package Control`](https://packagecontrol.io/installation)，使用`Package Control`安装`MasmAssembly`  
@@ -42,7 +42,8 @@ DosBox的作用是运行16位程序。
   "selector":"source.asm"
 }
 ```
-保存文件名为`Asm32`。
+保存文件名为`Asm32`。  
+然后，将[这里提供](https://github.com/vancymoon/sublime-masm32-X86-ASM-build/blob/master/LINK.EXE)的`link.exe`替换掉masm32的bin中的同名文件。
 ## `DosBox`挂载设置
 由于16位程序只能在DosBox的虚拟环境中运行，因此我们要对DosBox进行一些设置。
 首先，新建一个文件夹，如我在C盘下新建了一个DEBUG文件夹（当然，你也可以根据自己的需要在任意盘符下新建一个文件夹，文件夹名随意），里面存放你的16位汇编程序以及一些DosBox工具，我的DEBUG下有[这些工具](https://github.com/vancymoon/sublime-masm32-X86-ASM-build/blob/master/DEBUG.zip)。  
@@ -125,3 +126,4 @@ invoke MessageBox,0,offset result,offset prompt,0
 end main; 指定程序的起始执行点
 ```
 保存为`sum.asm`到`C:\DEBUG`中（或你自己新建的文件夹的路径中）。然后在`Sublime Text 3`中，选择`Tools` -> `Build System` -> `Asm32`，再使用快捷键`ctrl`+`B`，即可完成编译。如果编译报错找不到`include`文件夹，请将masm32中`include`和`lib`两个文件夹复制到`C:\DEBUG`中，再次`ctrl`+`B`编译即可。生成的32位程序不能在DosBox中运行，直接双击打开即可。
+
