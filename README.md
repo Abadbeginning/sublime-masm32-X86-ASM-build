@@ -14,5 +14,22 @@ DosBox的作用是运行16位程序。
 请根据你的`masm32`路径进行修改。
 ## 16位汇编编译配置
 下载[`asm.bat`](https://github.com/vancymoon/sublime-masm32-X86-ASM-build/blob/master/asm.bat)，并存储到`masm32`的`bin`文件夹下。  
-的
+在`Sublime Text 3`中，选择`Tools`->`Build System` -> `New Build System…`，将以下内容粘贴进去（覆盖原内容）：
+
+```JSON
+{
+    "cmd": ["c:\\masm32\\bin\\asm.bat", "$file_base_name"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.asm",
+    "encoding":"cp936",
+    "variants":  
+     [   
+          {
+              "name": "Run", 
+              "cmd": ["start","CMD", "/U", "/C","debug $file_base_name.exe"],
+              "shell":true
+          }
+     ]  
+}
+```
 
