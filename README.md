@@ -10,7 +10,9 @@ DosBox的作用是运行16位程序。
 
 ## 环境变量配置
 在Windows变量中分别添加`include`、`lib`、`path`三个变量，我的配置如下：
-![](https://raw.githubusercontent.com/vancymoon/Image/master/MASMPATH.png)请根据你的`masm32`路径进行修改。
+![](https://raw.githubusercontent.com/vancymoon/Image/master/MASMPATH.png)  
+请根据你的`masm32`路径进行修改。
 ## 16位汇编编译配置
-下载[`asm.bat`](https://github.com/vancymoon/sublime-masm32-X86-ASM-build/blob/master/asm.bat)，并存储到`masm32`的`bin`文件夹下。
+下载[`asm.bat`](https://github.com/vancymoon/sublime-masm32-X86-ASM-build/blob/master/asm.bat)，并存储到`masm32`的`bin`文件夹下。  
 的
+
