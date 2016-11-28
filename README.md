@@ -43,5 +43,28 @@ DosBox的作用是运行16位程序。
 }
 ```
 保存文件名为`Asm32`。
+## `DosBox`挂载设置
+由于16位程序只能在DosBox的虚拟环境中运行，因此我们要对DosBox进行一些设置。
+首先，新建一个文件夹，如我在C盘下新建了一个DEBUG文件夹（当然，你也可以根据自己的需要在任意盘符下新建一个文件夹，文件夹名随意），里面存放你的16位汇编程序以及一些DosBox工具，我的DEBUG下有[这些工具]()
+## 进行编译
+到这里，我们的配置工作就基本完成了。现在，我们尝试来对16位汇编程序以及32位汇编程序进行编译与运行。
+首先，在`Sublime Text 3`中新建空白文件，写入以下内容：
 
+```ASM
+data segment
+abc db "hello, world!", 0Dh, 0Ah, "$"
+data ends
+code segment
+assume cs:code, ds:data
+main:
+   mov ax, data
+   mov ds, ax
+   mov ah, 9
+   mov dx, offset abc
+   int 21h
+   mov ah, 4Ch
+   int 21h
+code ends
+end main
+```
 
