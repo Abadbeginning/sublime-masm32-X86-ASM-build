@@ -32,4 +32,16 @@ DosBox的作用是运行16位程序。
      ]  
 }
 ```
+保存文件名为`Asm16`。
+## 32位汇编编译配置
+在`Sublime Text 3`中，选择`Tools`->`Build System` -> `New Build System…`，将以下内容粘贴进去（覆盖原内容）：
+```JSON
+{
+  "cmd":["ml","/coff","/Cp","/Ic:/masm32/include","$file_name","/link","/subsystem:windows",
+                "/libpath:c:/masm32/lib"],
+  "selector":"source.asm"
+}
+```
+保存文件名为`Asm32`。
+
 
