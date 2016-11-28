@@ -1,4 +1,4 @@
-# Sublime下配置X86汇编编译环境
+# Sublime下使用masm32配置X86汇编编译环境
 配置教程参考了piratf的[64位Windows环境下通过"Sublime Text 3"搭建汇编语言IDE](http://piratf.ml/2015/05/28/asm-in-windows-x64/)，实际配置环境为`Windows 7 32位`。
 ## 准备工作
 1. 安装[`Sublime Text 3`](http://www.sublimetext.com/3)和[`Package Control`](https://packagecontrol.io/installation)，使用`Package Control`安装`MasmAssembly`  
